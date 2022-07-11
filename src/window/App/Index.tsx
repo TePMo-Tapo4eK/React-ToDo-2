@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./index.module.scss";
 import styles from "./index.module.scss";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+
 
 const App: React.FC = () => {
 
