@@ -1,15 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import React from "react";
+import reducer from "./reducers/reducer";
 
-const rootReducer = combineReducers({})
-
-export const Counter = () => {
-    return configureStore({
-        reducer: rootReducer
-    })
-}
-
-
-export type RootState = ReturnType<typeof rootReducer>
-
-export type App = ReturnType<typeof rootReducer>
+const rootReducer = combineReducers({
+    toolkit: reducer
+})
+const store = configureStore({
+    reducer: rootReducer,
+})
+export default store
