@@ -11,3 +11,5 @@ export const Counter = () => {
 
 
 export type RootState = ReturnType<typeof rootReducer>
+
+export type App = ReturnType<typeof rootReducer>
