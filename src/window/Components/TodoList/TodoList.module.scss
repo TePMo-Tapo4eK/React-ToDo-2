@@ -1,0 +1,71 @@
+.Todos__In{
+    min-height: 30px;
+    margin: 20px;
+    background-color: rgb(250, 250, 250);
+    max-height: 700px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+//Окошко тодошки
+.todo__discription{
+    font-size: 20px;
+}
+.todo__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_btns{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    button {
+        height: 30px;
+        width: 30px;
+        border-top: 2px solid rgb(180, 180, 180);
+        border-left: 2px solid rgb(180, 180, 180);
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        margin-left: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.close{
+            font-size: 14px;
+        }
+        &.accept:hover{
+            background-color: rgb(197, 233, 162);
+        }
+        &.close:hover{
+            background-color: rgb(243, 96, 96);
+        }
+    }
+
+    &__number{
+        font-size: 20px;
+    }
+
+}
+
+.todo__item{
+    min-height: 50px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-top: 3px solid rgb(180, 180, 180);
+    border-left: 3px solid rgb(180, 180, 180);
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+
+    &:first-child{
+        margin-top: 20px;
+    }
+}

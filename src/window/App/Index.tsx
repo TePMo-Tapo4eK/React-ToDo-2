@@ -3,6 +3,8 @@ import "./index.module.scss";
 import styles from "./index.module.scss";
 import { motion } from "framer-motion";
 import Header from "../Components/Header/Header";
+import Form from "../Components/Form/Form";
+import TodoList from "../Components/TodoList/TodoList";
 
 
 const App: React.FC = () => {
@@ -14,21 +16,11 @@ const App: React.FC = () => {
         <Header/>
 
         <div className={styles.Todos}>
-          <div className={styles.Form}>
-            <input
-              type="text"
-              placeholder="Task..."
-              // onChange={(e) => setValue(e.target.value)}
-            ></input>
-            <button >Add Todo</button>
-          </div>
-          <div className={styles.Todos__In}>
-            <div className={styles.todo}>
-              <div className={styles.todo__list}>
-                List
-              </div>
-            </div>
-          </div>
+
+          <Form/>
+          
+          <TodoList/>
+          
         </div>
       </motion.div>
     </div>

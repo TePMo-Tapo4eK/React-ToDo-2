@@ -27,81 +27,7 @@
 
     
 }
-.Header {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    background-color: #050592;
-    padding: 0 20px;
-    .Author{
-        font-size: 12px;
-        color: gray;
-        padding: 10px;
-    }
-    .Name{
-        margin: 0;
-        font-weight: 600;
-    }
-    button {
-        height: 30px;
-        width: 30px;
-        border-top: 3px solid rgb(180, 180, 180);
-        border-left: 3px solid rgb(180, 180, 180);
-        border-bottom: 3px solid black;
-        border-right: 3px solid black;
-        margin-left: 5px;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 28px;
-    }
-        
-    h1{
-        font-size: 30px;
-        letter-spacing: 2px;
-        text-align: start;
-        padding: 10px;
-        color:rgb(236, 236, 236);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    };
-}
 
-.Form{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(250, 250, 250);
-    width: calc(100% - 40px);
-    margin: 20px;
-    border-bottom: 3px solid white;
-    border-right: 3px solid white;
-    border-top: 3px solid black;
-    border-left: 3px solid black;
-
-    input{
-        width: 80%;
-        font-size: 16px;
-        padding-left: 20px;
-        background-color: inherit;
-        &::placeholder{
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    }
-    button{
-        padding: 0 20px;
-        font-size: 16px;
-        height: 100%;
-        border-top: 2px solid rgb(180, 180, 180);
-        border-left: 2px solid rgb(180, 180, 180);
-        border-bottom: 2px solid black;
-        border-right: 2px solid black;
-    }
-}
 
 .todo{
     width: 800px;
@@ -118,19 +44,7 @@
     }
 }
 
-.todo__item{
-    min-height: 50px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-top: 3px solid rgb(180, 180, 180);
-    border-left: 3px solid rgb(180, 180, 180);
-    border-bottom: 3px solid black;
-    border-right: 3px solid black;
 
-    &:first-child{
-        margin-top: 20px;
-    }
-}
 .Todos{
     width: calc(100% - 40px);
     margin: 20px;
@@ -139,62 +53,4 @@
     border-left: 3px solid white;
     border-bottom: 3px solid black;
     border-right: 3px solid black;
-
-    &__In{
-        margin: 20px;
-        background-color: rgb(250, 250, 250);
-        max-height: 700px;
-        border-bottom: 3px solid white;
-        border-right: 3px solid white;
-        border-top: 3px solid black;
-        border-left: 3px solid black;
-        overflow: scroll;
-        overflow-x: hidden;
-    }
-}
-
-//Окошко тодошки
-.todo__discription{
-    font-size: 20px;
-}
-.todo__item{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &_btns{
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-    }
-    
-    button {
-        height: 30px;
-        width: 30px;
-        border-top: 2px solid rgb(180, 180, 180);
-        border-left: 2px solid rgb(180, 180, 180);
-        border-bottom: 2px solid black;
-        border-right: 2px solid black;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 32px;
-        margin-left: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &.close{
-            font-size: 14px;
-        }
-        &.accept:hover{
-            background-color: rgb(197, 233, 162);
-        }
-        &.close:hover{
-            background-color: rgb(243, 96, 96);
-        }
-    }
-
-    &__number{
-        font-size: 20px;
-    }
-
 }
