@@ -1,11 +1,8 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import React from "react";
-import reducer from "./reducers/reducer";
+import { configureStore } from "@reduxjs/toolkit";
+import todosSlice from "./reducers/todosSlice";
 
-const rootReducer = combineReducers({
-    toolkit: reducer
+export const store = configureStore({
+    reducer:{
+        user: todosSlice,
+    }
 })
-const store = configureStore({
-    reducer: rootReducer,
-})
-export default store
