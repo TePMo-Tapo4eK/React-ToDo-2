@@ -14,7 +14,7 @@ export const todosSlice: any = createSlice({
     initialState,
     reducers: {
         setTodo: (state, action) => {
-            state.todos = [action.payload, ...state.todos]
+            state.todos = [{title: action.payload, completed: false}, ...state.todos]
         }
     }
 })
