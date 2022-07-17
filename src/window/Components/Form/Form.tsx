@@ -4,11 +4,19 @@ import { setTodo } from "../../../data/reducers/todosSlice";
 import styles from './Form.module.scss'
 
 const Form: any = () => {
+
   const [value, setValue] = useState('')
+
   const dispatch = useDispatch()
-  const reset = () => {
-    dispatch(setTodo(value))
-    setValue(() => '')
+  
+  const addTodo = () => {
+    const todo = {
+      title: value,
+      completed: false,
+    }
+
+    dispatch(setTodo(todo))
+    setValue('')
   }
     return(
         <div className={styles.Form}>
@@ -18,7 +26,7 @@ const Form: any = () => {
               onChange={(e) => setValue(e.target.value)}
               value={value}
             ></input>
-            <button onClick={reset} >Add Todo</button>
+            <button onClick={addTodo}>Add Todo</button>
           </div>
     )
 }

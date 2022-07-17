@@ -1,12 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState:any = {
-    todos: [
-        {
-            title: "title",
-            completed: false
-        },
-    ]
+    todos: []
 }
 
 export const todosSlice: any = createSlice({
@@ -14,7 +9,7 @@ export const todosSlice: any = createSlice({
     initialState,
     reducers: {
         setTodo: (state, action) => {
-            state.todos = [{title: action.payload, completed: false}, ...state.todos]
+            state.todos.unshift(action.payload,)
         }
     }
 })
