@@ -5,7 +5,7 @@ const Header: any = () => {
 
   return (
   <div className={styles.Header}>
-    <h1 className={styles.Name}>ToDo-List v2.0</h1>
+    <h1 className={styles.Name}>ToDo-List - Win98</h1>
     <div className={styles.Header__btns}>
       <button>_</button>
       <button>

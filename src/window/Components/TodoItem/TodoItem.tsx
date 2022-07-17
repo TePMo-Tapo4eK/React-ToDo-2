@@ -6,7 +6,7 @@ const TodoItem:any = (props:any) => {
         <div className={styles.todo__item}>
               <p className={styles.todo__discription}>{props.todo.title}</p>
               <div className={styles.todo__item_btns}>
-                <button className={styles.accept}>Готово</button>
+                <button className={styles.accept}>Done</button>
                 <button className={styles.close}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

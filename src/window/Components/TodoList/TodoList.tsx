@@ -11,9 +11,9 @@ const Todos: any = () => {
     <div className={styles.Todos__In}>
       <div className={styles.todo}>
         <div className={styles.todo__list}>
-          {todosList.map((todo: any) => (
+          {(todosList.length !== 0) ? todosList.map((todo: any) => (
             <TodoItem todo={todo}/>
-          ))}
+          )) : <div className={styles.nothing}>You can add task in input</div>}
         </div>
       </div>
     </div>
