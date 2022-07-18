@@ -11,7 +11,7 @@ const Todos: any = () => {
         <div className={styles.todo__list}>
           {(todosList.length !== 0) ? todosList.map((todo: any) => (
             <TodoItem key={todo.title} todo={todo}/>
-          )) : <div className={styles.nothing}>You can add task in input</div>}
+          )) : <div className={styles.nothing}>You can add new task</div>}
         </div>
       </div>
     </div>
