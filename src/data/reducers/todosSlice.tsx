@@ -10,9 +10,12 @@ export const todosSlice: any = createSlice({
     reducers: {
         setTodo: (state, action) => {
             state.todos.unshift(action.payload,)
+        },
+        removeTodo: (state, action) => {
+            state.todos =  state.todos.filter((todo:any) => todo.title !== action.payload)
         }
     }
 })
 
-export const {setTodo} :any = todosSlice.actions
+export const {setTodo, removeTodo} :any = todosSlice.actions
 export default todosSlice.reducer

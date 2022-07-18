@@ -1,13 +1,25 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import styles from './TodoItem.module.scss'
+import { removeTodo } from "../../../data/reducers/todosSlice";
 
 const TodoItem:any = (props:any) => {
+
+  const dispatch = useDispatch()
+
+  const removeTodoHandler = (title:any) => {
+    dispatch(removeTodo(title))
+  }
+
     return(
         <div className={styles.todo__item}>
               <p className={styles.todo__discription}>{props.todo.title}</p>
               <div className={styles.todo__item_btns}>
                 <button className={styles.accept}>Done</button>
-                <button className={styles.close}>
+
+
+{/* Удаление Todo */}
+                <button className={styles.close} onClick={() => removeTodoHandler(props.todo.title)}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true"
@@ -23,6 +35,9 @@ const TodoItem:any = (props:any) => {
                     />
                   </svg>
                 </button>
+
+
+
               </div>
             </div>
     )
