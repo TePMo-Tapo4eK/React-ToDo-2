@@ -1,25 +1,35 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import styles from './TodoItem.module.scss'
-import { removeTodo } from "../../../data/reducers/todosSlice";
+import { removeTodo, completeTodo } from "../../../data/reducers/todosSlice";
 
 const TodoItem:any = (props:any) => {
 
   const dispatch = useDispatch()
 
-  const removeTodoHandler = (title:any) => {
-    dispatch(removeTodo(title))
+  const removeTodoHandler = (id:any) => {
+    dispatch(removeTodo(id))
+  }
+
+  const completeTaskHandler = (todo: any) => {
+    const completedTodo = {
+      id: todo.id,
+      title: todo.title,
+      completed: true,
+    }
+    dispatch(completeTodo(completedTodo))
   }
 
     return(
-        <div className={styles.todo__item}>
+        <div className={(props.todo.completed === false) ? styles.todo__item : styles.todo__item_completed}>
               <p className={styles.todo__discription}>{props.todo.title}</p>
               <div className={styles.todo__item_btns}>
-                <button className={styles.accept}>Done</button>
+                <button className={(props.todo.completed === false) ? styles.accept : styles.accept_none}
+                  onClick={() => completeTaskHandler(props.todo)}>Done</button>
 
 
 {/* Удаление Todo */}
-                <button className={styles.close} onClick={() => removeTodoHandler(props.todo.title)}>
+                <button className={styles.close} onClick={() => removeTodoHandler(props.todo.id)}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true"

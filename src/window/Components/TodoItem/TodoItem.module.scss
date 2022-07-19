@@ -1,5 +1,7 @@
 .todo__discription{
     font-size: 20px;
+    max-width: 85%;
+    overflow: hidden;
 }
 .todo__item{
     display: flex;
@@ -32,6 +34,9 @@
         &.accept{
             width: fit-content;
             padding: 0 15px;
+            &_none{
+                display: none;
+            }
         }
         &.accept:hover{
             background-color: rgb(197, 233, 162);
@@ -58,5 +63,24 @@
 
     &:first-child{
         margin-top: 20px;
+    }
+}
+
+.todo__item_completed{
+    @extend .todo__item;
+    background-color: rgb(238, 238, 238);
+    border-bottom: 3px solid rgb(180, 180, 180);
+    border-right: 3px solid rgb(180, 180, 180);
+    border-top: 3px solid rgb(117, 117, 117);
+    border-left: 3px solid rgb(117, 117, 117);
+    color: rgb(184, 184, 184);
+    button{
+        border-top: 3px solid rgb(180, 180, 180);
+        border-left: 3px solid rgb(180, 180, 180);
+        border-bottom: 3px solid rgb(117, 117, 117);
+        border-right: 3px solid rgb(117, 117, 117);
+        &.close:hover{
+            background-color: rgb(192, 114, 114);
+        }
     }
 }

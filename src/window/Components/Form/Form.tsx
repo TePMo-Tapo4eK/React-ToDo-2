@@ -11,10 +11,10 @@ const Form: any = () => {
   
   const addTodo = () => {
     const todo = {
+      id: value + Math.random()*111113,
       title: value,
       completed: false,
     }
-
     dispatch(setTodo(todo))
     setValue('')
   }
