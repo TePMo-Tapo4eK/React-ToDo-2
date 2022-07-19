@@ -2,7 +2,7 @@
 
 React + TypeScript + Redux-Toolkit + SCSS + Framer-Motion
 
-# Link: coming soon...
+# Link: [todo-98](https://todo-98.vercel.app/)
 
 # Preview
 
