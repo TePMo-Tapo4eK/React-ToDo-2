@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 .water{
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.4);
+    filter: invert(10%);
     position: fixed;
     left: calc(50% - 72px);
     top: 5px;
     width: 144px;
     font-family: 'Hammersmith One', sans-serif;
+    z-index: 999;
 }
